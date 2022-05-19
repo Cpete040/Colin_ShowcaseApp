@@ -9,7 +9,7 @@
         <mat-card-header>
             <mat-card-title>Data Source</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="../../assets/images/data.PNG" alt="NgFor Image">
+        <img mat-card-image src="../../assets/images/data.PNG" onerror="this.src='./assets/images/data.PNG';" alt="NgFor Image">
         <mat-card-content>
             For this example we use a local JSON file containing a list of restaurants
         </mat-card-content>
@@ -18,7 +18,7 @@
         <mat-card-header>
             <mat-card-title>Service</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="../../assets/images/service.PNG" alt="NgFor Image">
+        <img mat-card-image src="../../assets/images/service.PNG" onerror="this.src='./assets/images/service.PNG';" alt="NgFor Image">
         <mat-card-content>
             The angular service uses HttpClient to retrieve the data from the JSON, returning an observable, a type that allows live updates on subscription.
         </mat-card-content>
@@ -27,7 +27,7 @@
         <mat-card-header>
             <mat-card-title>Subscription</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="../../assets/images/subscription.PNG" alt="NgFor Image">
+        <img mat-card-image src="../../assets/images/subscription.PNG" onerror="this.src='./assets/images/subscription.PNG';" alt="NgFor Image">
         <mat-card-content>
             The component subscribes to the observable and assigns the value to a local variable to be displayed. 
         </mat-card-content>
@@ -35,7 +35,7 @@
 </div>
 <mat-card class="content">
     <mat-card-header>Here is the result:</mat-card-header>
-    <img mat-card-image src="../../assets/images/result.PNG" alt="NgFor Image">
+    <img mat-card-image src="../../assets/images/result.PNG" onerror="this.src='./assets/images/result.PNG';" alt="NgFor Image">
     <div *ngFor="let rest of restaurants">
         {{rest.name}}
     </div>
