@@ -1,15 +1,30 @@
+
 <mat-card class="content">
-    There are three major kinds of directives: Components, Attribute Directives and Structural Directives. 
+    <span>
+        <div class="horizontal">
+            <div>
+                <p>
+                    <br>
+                    There are three major kinds of directives: <b>Components, Attribute Directives and Structural Directives.</b> 
     <br>
-    Components themselves are directives, called upon by including the selector in another template.
     <br>
-    The built in attribute directives include: NgModel, NgStyle and NgClass. NgModel is used in two way binding as discussed under data binding. NgClass and NgStyle allow you to apply multiple css classes or inline styles respectively from the model.
+    <b>Components</b> themselves are directives, called upon by including the selector in another template.
     <br>
-    The most useful directives are the built in attribute directives, including: NgFor, NgIf and NgSwitch
     <br>
-    The following is the model used in the examples for this section:
+    The built in <b>attribute directives</b> include: NgModel, NgStyle and NgClass. NgModel is used in two way binding as discussed under data binding. NgClass and NgStyle allow you to apply multiple css classes or inline styles respectively from the model. 
     <br>
-    <img src="../../assets/images/directives_model.PNG"  onerror="this.src='./assets/images/directives_model.PNG';">
+    <br>
+    The most useful directives are the built in <b>structual directives</b>, including: NgFor, NgIf and NgSwitch
+    <br>
+    <br>
+                </p>
+    </div>
+    <p>
+        For the examples in this section we will exclusively cover structural directives. The following is the model used in this section:
+        <img src="../../assets/images/directives_model.PNG"  onerror="this.src='./assets/images/directives_model.PNG';">
+    </p>
+        </div>
+    </span>
 </mat-card>
 <span>
 <div class="horizontal">
@@ -20,13 +35,16 @@
     </mat-card-header>
     <img mat-card-image src="../../assets/images/ngFor.PNG"  onerror="this.src='./assets/images/ngFor.PNG';" alt="NgFor Image">
     <mat-card-content>
-        Including the NgFor directive in a tag allows you to duplicate the tag once for each item in a list. Updating the list will update the display in real time.
-        <br>
+        <p>
+        Including the <b>NgFor</b> directive in a tag allows you to duplicate the tag once for each item in a list. Updating the list will update the display in real time.
+        </p>
+        <p>
         In the following example, we have a div that displays integers in a list.
+        </p>
         <div *ngFor="let item of items" style="background-color:blue; text-align: center;">
             {{item}}
         </div>
-        <button mat-button (click)="addItem()">click me to add to the list</button>
+        <button class="exbutton" mat-button (click)="addItem()">click me to add the next number to the list</button>
     </mat-card-content>
 </mat-card>
 <mat-card class="example-card" [class.mat-elevation-z15]="true">
@@ -36,13 +54,16 @@
     </mat-card-header>
     <img mat-card-image src="../../assets/images/ngIf.PNG"  onerror="this.src='./assets/images/ngIf.PNG';" alt="NgIf Image">
     <mat-card-content>
-        Including the NgIf directive in a tag allows you to hide or display a tag based on the value of a boolean attribute.
-        <br>
-        In the following example, we have a div that appears or disappears based on the value of the showTag attribute.
+        <p>
+            Including the NgIf directive in a tag allows you to hide or display a tag based on the value of a boolean attribute.
+        </p>
+        <p>
+            In the following example, we have a div that appears or disappears based on the value of the showTag attribute.
+        </p>
         <div *ngIf="showTag" style="background-color:blue; text-align: center;">
             Now you see me
         </div>
-        <button mat-button (click)="toggleShowTag()">click me to toggle the value of showTag</button>
+        <button class="exbutton" mat-button (click)="toggleShowTag()">click me to toggle the value of showTag</button>
     </mat-card-content>
 </mat-card>
 <mat-card class="example-card" [class.mat-elevation-z15]="true">
@@ -52,9 +73,12 @@
     </mat-card-header>
     <img mat-card-image src="../../assets/images/ngSwitch.PNG"  onerror="this.src='./assets/images/ngSwitch.PNG';" alt="NgSwitch Image">
     <mat-card-content>
-        Including the NgSwitch and NgSwitchCase directives in your template allow you to select one of multiple tags to display based on the value of an attribute.
-        <br>
-        In the following example, we have 3 divs that can be displayed based on the value you put in the input. The tag with ngSwitchDefault is displayed if the attribute doesn't match one of the expected values.
+        <p>
+            Including the NgSwitch and NgSwitchCase directives in your template allow you to select one of multiple tags to display based on the value of an attribute.
+        </p>
+        <p>
+            In the following example, we have 3 divs that can be displayed based on the value of the input. The tag with ngSwitchDefault is displayed if the attribute doesn't match one of the expected values.
+        </p>
         <div [ngSwitch]="fruit">
             <div *ngSwitchCase="'apple'" style="background-color: red;">this div is the color of an apple</div>
             <div *ngSwitchCase="'orange'" style="background-color: orange;">this div is the color of an orange</div>

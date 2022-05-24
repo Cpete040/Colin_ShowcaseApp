@@ -1,10 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body { margin: 0; font-family:'Courier New', Courier, monospace; }
+
+p { margin-bottom: 10px; }
+
+mat-card-title { font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+
+mat-card { margin-bottom: 10px;}
+
+mat-card-content { margin-bottom: 10px; font-family:'Courier New', Courier, monospace;}
+
+th {border: 1px solid}
+td {border: 1px solid}
+
+.exbutton {font-family:Arial, Helvetica, sans-serif; background-color: whitesmoke; color:darkslategray;}
+
 .content {
     margin-bottom: 15px;
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    color: yellow;
 }

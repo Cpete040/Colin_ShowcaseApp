@@ -1,9 +1,35 @@
 <mat-card class="content">
-    Data binding is the syntax used to communicate between the model and the template. Interpolation is a form of model to template data binding, but in this section we'll cover the other data binding syntaxes.
-    <br>
-    The following is the model used in the examples for this section:
-    <br>
-    <img src="../../assets/images/data_binding_model.PNG" onerror="this.src='./assets/images/data_binding_model.PNG';" alt="Data Binding Model Example Image">
+    <span>
+        <div class="horizontal">
+    <div>
+        <p>
+            <b>Data binding</b> is the syntax used to communicate between the model and the template. Interpolation is a form of data 
+            binding, but in this section we'll cover the other data binding syntaxes.
+        </p>
+        <p>
+            <b>Property binding</b> should be used when you want to set a template element property to a component model attribute 
+            value. This is especially useful when you want a template element property to change programatically (see below), 
+            or if you want to pass values to a child component (check out the framed-details component in the source code for 
+            more).
+        </p>
+        <p>
+            <b>Event binding</b> should be used whenever you want to respond to a user's action or some other event. A full 
+            list of events can be found at 
+            <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/Events">this mozilla source</a>.
+            Custom events can be created and emitted using the EventEmitter class.
+        </p>
+        <p>
+            <b>Two way binding</b> allows two way communication between the component model and the template. Template element
+            properties can be two way bound, but this binding is most useful when working with forms filled out by the user.
+            Forms are bound using the NgModel directive. If you want the page to respond in real time to the user's input, two 
+            way binding is the thing for you! 
+        </p>
+    </div>
+    <p>The following is the model used in the examples for this section:
+        <img src="../../assets/images/data_binding_model.PNG" onerror="this.src='./assets/images/data_binding_model.PNG';" alt="Data Binding Model Example Image">
+    </p>
+    </div>
+</span> 
 </mat-card>
 <span>
     <div class="horizontal">
@@ -14,10 +40,11 @@
             </mat-card-header>
             <img mat-card-image src="../../assets/images/property_binding.PNG" onerror="this.src='./assets/images/property_binding.PNG';" alt="Property Binding Example Image">
             <mat-card-content>
-                Property binding allows you to use model values as html property values. To bind a property, simply surround it with the [] delimeter.
-                <br>
-                <div [style.color]="textColor">
-                    The following text is colored according to the textColor attribute
+                <p>
+                    To bind a property, simply surround it with the <b>[ ]</b> delimeter.
+                </p>
+                <div [style.color]="textColor" style="font-size: large;">
+                    This text is colored according to the textColor attribute!
                 </div>
             </mat-card-content>
         </mat-card>
@@ -28,11 +55,13 @@
             </mat-card-header>
             <img mat-card-image src="../../assets/images/event_binding.PNG" onerror="this.src='./assets/images/event_binding.PNG';" alt="Event Binding Example Image">
             <mat-card-content (click)="toggleTextColor()">
-                Event binding allows you to do something in the model when a specific event occurs in the template (click, keyup, etc.).
-                <br>
-                To use event binding, simply deliminate the event in tag with parentheses ().
-                <br>
-                For example, clicking anywhere on this text will call a method in the model that changes the textColor attribute.
+                <p>
+                    To use event binding, simply deliminate the event in tag with parentheses <b>( )</b>.
+                </p>
+                <p>
+                    For example, clicking anywhere on this text will call a method in the model 
+                    that changes the textColor attribute.
+                </p>
             </mat-card-content>
         </mat-card>
         <mat-card class="example-card" [class.mat-elevation-z15]="true">
@@ -42,10 +71,10 @@
             </mat-card-header>
             <img mat-card-image src="../../assets/images/two_way_binding.PNG" onerror="this.src='./assets/images/two_way_binding.PNG';" alt="Two Way Binding Example Image">
             <mat-card-content>
-                Two way binding allows the data to flow both ways. A typical usecase would be an input and a result on the same page. With two way binding, changing the input will update the result in real time.
-                <br>
-                For example...
-                <br>
+                <p>
+                    To use two way binding, deliminate a property or the ngModel directive with <b>[( )]</b>. For example 
+                    changing the following input results in a real time template change: 
+                </p>
                 <input [(ngModel)]="resultText">
                 {{resultText}}
             </mat-card-content>

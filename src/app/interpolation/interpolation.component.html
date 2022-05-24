@@ -1,16 +1,31 @@
 <mat-card ngNonBindable class="content">
-    Interpolation is a special type of syntax that allows you to include expressions, function calls and attributes in your template HTML. In order to include a model value in our template, we simply surround the attribute/function/calculation with the {{}} delimeter. 
-    <br>
-    The best way to understand interpolation is with an example.
-    <br>
-    In our typescript model we have two string attributes and a function. Using interpolation we can display these attribute values and the function return value in our template.
+    <p>
+        <b>Interpolation</b> is a special type of syntax that allows you to include expressions, function calls and attributes 
+        in your template HTML. In order to include a model value in our template, we simply surround the 
+        attribute/function/calculation with the {{}} delimeter. 
+    </p>
+    <p>
+        In the typescript model for this page we have two string attributes and a function. Using interpolation we can display 
+        these attribute values and the function return value in our template.
+    </p>
 </mat-card>
-<mat-card class="example-card">
-    <mat-card-header>
-    Example:
-    </mat-card-header>
-    <img mat-card-image src="../../assets/images/Interpolation_template.PNG"  onerror="this.src='./assets/images/Interpolation_template.PNG';" alt="Interpolation Example Image">
-    <img mat-card-image src="../../assets/images/Interpolation_model.PNG"  onerror="this.src='./assets/images/Interpolation_model.PNG';" alt="Interpolation Example Image">
+<span>
+    <div class="horizontal">
+        <mat-card class="example-card" [class.mat-elevation-z15]="true">
+            <mat-card-header>
+                <mat-card-title>Component Model</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="../../assets/images/Interpolation_model.PNG"  onerror="this.src='./assets/images/Interpolation_model.PNG';" alt="NgFor Image">
+        </mat-card>
+        <mat-card class="example-card" [class.mat-elevation-z15]="true">
+            <mat-card-header>
+                <mat-card-title>Component Template</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="../../assets/images/Interpolation_template.PNG"  onerror="this.src='./assets/images/Interpolation_template.PNG';" alt="NgFor Image">
+        </mat-card>
+    </div>
+</span>
+<mat-card class="content">
     <mat-card-content>
         The first string attribute is: {{str1}}
         <br>

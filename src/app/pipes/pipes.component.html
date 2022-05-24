@@ -1,38 +1,67 @@
 <mat-card class="content">
-    Pipes are essentially a means to perform string formatting on interpolated data without adding code to your model.
-    <br>
-    According to angular.io/guide a few Commonly used pipes include:
-    <ul>
-        <li>
-            UpperCasePipe	Transforms text to all upper case.
-        </li>
-        <li>
-            LowerCasePipe	Transforms text to all lower case.
-        </li>
-        <li>
-            DatePipe	Formats a date value according to locale rules.
-        </li>
-        <li>
-            CurrencyPipe	Transforms a number to a currency string, formatted according to locale rules.
-        </li>
-        <li>
-            DecimalPipe	Transforms a number into a string with a decimal point, formatted according to locale rules.
-        </li>
-        <li>
-            PercentPipe	Transforms a number to a percentage string, formatted according to locale rules.
-        </li>
-    </ul>
+    <span>
+        <div class="horizontal">
+            <div>
+    
+        <b>Pipes</b> are essentially a means to perform string formatting on interpolated data without adding code to your model.
+   
+        According to angular.io/guide a few Commonly used pipes include:
+        <ul>
+            <li>
+                <b>UpperCasePipe</b>	Transforms text to all upper case.
+            </li>
+            <li>
+                <b>LowerCasePipe</b>	Transforms text to all lower case.
+            </li>
+            <li>
+                <b>DatePipe</b>	Formats a date value according to locale rules.
+            </li>
+            <li>
+                <b>CurrencyPipe</b>	Transforms a number to a currency string, formatted according to locale rules.
+            </li>
+            <li>
+                <b>DecimalPipe</b>	Transforms a number into a string with a decimal point, formatted according to locale rules.
+            </li>
+            <li>
+                <b>PercentPipe</b>	Transforms a number to a percentage string, formatted according to locale rules.
+            </li>
+        </ul>
+    <p>
+        For a complete list of pipes visit the <a class="link" href="https://angular.io/api/common#pipes">Angular documentation site</a>
+    </p>
+    </div>
+    <p>
+    The following is the model for this section, attributes will be used to demonstrate pipes:
+    <img src="../../assets/images/pipes_model.PNG" onerror="this.src='./assets/images/pipes_model.PNG';">
+    </p>
+        </div>
+    </span>
+</mat-card>
+<mat-card class="content">
+    <span>
+        <div class="horizontal">
+            <p>
+                The following is an example of each of these pipes in action:
+                <br>
+                <br>
+            
 
-    The following is an example of each of these pipes in action:
-    <img src="../../assets/images/pipes.PNG" onerror="this.src='./assets/images/pipes.PNG';">
-    <br>
-    {{caseText | uppercase}}
-    <br>
-    {{caseText | lowercase}}
-    <br>
-    {{date | date: "longDate"}}
-    <br>
-    {{money | currency: 'EUR'}}
-    <br>
-    {{pi | number: '1.1-5' | percent}}
+            
+                The results of applying each pipe:
+                <br>
+                {{caseText | uppercase}}
+                <br>
+                {{caseText | lowercase}}
+                <br>
+                {{date | date: "longDate"}}
+                <br>
+                {{money | currency: 'EUR'}}
+                <br>
+                {{pi | number: '1.1-3'}}
+                <br>
+                {{pi | percent}}
+            </p>
+            <img src="../../assets/images/pipes_template.PNG" onerror="this.src='./assets/images/pipes_template.PNG';">
+        </div>
+    </span>
 </mat-card>

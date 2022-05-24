@@ -1,9 +1,13 @@
 <mat-card class="content">
-    Functionality that is shared accross multiple components can be written into Angular services so that it doesn't need to be repeated.
-    The most common use for Angular services is to perform data access to some api by making use of the Angular HttpClient Module.
-    <br>
-    The following is an example of services and HttpClient in action, retrieving restaurant data from a local JSON file. In an actual application, the url used would be replaced with that of some api.
-</mat-card>
+    <p>
+        Functionality that is shared accross multiple components can be written into Angular <b>services</b> so that it doesn't need to be repeated.
+        You can use the cli command "ng generate service [your service name]" to add a <b>service</b> to the root of your application.
+        The most common use for Angular <b>services</b> is to perform data access to some api by making use of the Angular <b>HttpClient Module.</b>
+    </p>
+    <p>
+        The following is an example of services and HttpClient in action, retrieving restaurant data from a local JSON file. In an actual application, the url used would be replaced with that of some api.
+    </p>
+    </mat-card>
 <div class="horizontal">
     <mat-card class="example-card" [class.mat-elevation-z15]="true">
         <mat-card-header>
@@ -34,9 +38,20 @@
     </mat-card>
 </div>
 <mat-card class="content">
-    <mat-card-header>Here is the result:</mat-card-header>
+    <mat-card-header>Here is the result output to a table:</mat-card-header>
     <img mat-card-image src="../../assets/images/result.PNG" onerror="this.src='./assets/images/result.PNG';" alt="NgFor Image">
-    <div *ngFor="let rest of restaurants">
-        {{rest.name}}
-    </div>
+    <table>
+        <tr>
+          <th>Restaurant Name</th>
+          <th>Restaurant Rating /10</th>
+          <th>Address</th>
+          <th>Phone Number</th>
+        </tr>
+        <tr *ngFor="let rest of restaurants">
+          <td>{{rest.name}}</td>
+          <td>{{rest.ratingOfTen}}</td>
+          <td>{{rest.address}}</td>
+          <td>{{rest.phoneNumber}}</td>
+        </tr>
+      </table>
 </mat-card>
