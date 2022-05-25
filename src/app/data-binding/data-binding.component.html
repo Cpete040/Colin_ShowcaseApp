@@ -26,7 +26,7 @@
         </p>
     </div>
     <p>The following is the model used in the examples for this section:
-        <img src="../../assets/images/data_binding_model.PNG" onerror="this.src='./assets/images/data_binding_model.PNG';" alt="Data Binding Model Example Image">
+        <img (click)="imageClick(0)" src="../../assets/images/data_binding_model.PNG" onerror="this.src='./assets/images/data_binding_model.PNG';" alt="Data Binding Model Example Image">
     </p>
     </div>
 </span> 
@@ -38,7 +38,7 @@
                 <mat-card-title>Property Binding</mat-card-title>
                 <mat-card-subtitle>model values modifying the template</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="../../assets/images/property_binding.PNG" onerror="this.src='./assets/images/property_binding.PNG';" alt="Property Binding Example Image">
+            <img (click)="imageClick(1)" mat-card-image src="../../assets/images/property_binding.PNG" onerror="this.src='./assets/images/property_binding.PNG';" alt="Property Binding Example Image">
             <mat-card-content>
                 <p>
                     To bind a property, simply surround it with the <b>[ ]</b> delimeter.
@@ -53,7 +53,7 @@
                 <mat-card-title>Event Binding</mat-card-title>
                 <mat-card-subtitle>template events affecting the model</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="../../assets/images/event_binding.PNG" onerror="this.src='./assets/images/event_binding.PNG';" alt="Event Binding Example Image">
+            <img (click)="imageClick(2)" mat-card-image src="../../assets/images/event_binding.PNG" onerror="this.src='./assets/images/event_binding.PNG';" alt="Event Binding Example Image">
             <mat-card-content (click)="toggleTextColor()">
                 <p>
                     To use event binding, simply deliminate the event in tag with parentheses <b>( )</b>.
@@ -69,7 +69,7 @@
                 <mat-card-title>Two Way Binding</mat-card-title>
                 <mat-card-subtitle>template and model affect eachother</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="../../assets/images/two_way_binding.PNG" onerror="this.src='./assets/images/two_way_binding.PNG';" alt="Two Way Binding Example Image">
+            <img (click)="imageClick(3)" mat-card-image src="../../assets/images/two_way_binding.PNG" onerror="this.src='./assets/images/two_way_binding.PNG';" alt="Two Way Binding Example Image">
             <mat-card-content>
                 <p>
                     To use two way binding, deliminate a property or the ngModel directive with <b>[( )]</b>. For example 
@@ -81,3 +81,4 @@
         </mat-card>
     </div>
 </span>
+<ng-image-slider [hidden]="imageBoxHidden" (lightboxClose)="hideOnExit()" #test [images]="images" #nav></ng-image-slider>

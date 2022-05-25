@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgImageSliderComponent } from 'ng-image-slider';
 
 @Component({
   selector: 'app-data-binding',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent implements OnInit {
+  @ViewChild('nav') slider!: NgImageSliderComponent;
+  imageBoxHidden: boolean=true;
+  images: Array<Object> =  [{image: "assets/images/data_binding_model.PNG"},
+                            {image: "assets/images/property_binding.PNG"},
+                            {image: "assets/images/event_binding.PNG"},
+                            {image: "assets/images/two_way_binding.PNG"}]
+
   textColor: string="orange"
   resultText: string="Type Something"
   
@@ -13,6 +21,16 @@ export class DataBindingComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  imageClick(index: number) {
+    this.imageBoxHidden=false;
+    this.slider.imageOnClick(index);
+  }
+
+  hideOnExit(){
+    this.imageBoxHidden=true;
+  }
+  
   toggleTextColor(){
     if(this.textColor==="orange"){
       this.textColor="blue";
@@ -21,4 +39,5 @@ export class DataBindingComponent implements OnInit {
       console.log('test')
     }
   }
+
 }

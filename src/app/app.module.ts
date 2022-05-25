@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { OverlayModule } from '@angular/cdk/overlay'
+import { NgImageSliderModule } from 'ng-image-slider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +19,6 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ServicesComponent } from './services/services.component';
 import { ModulesComponent } from './modules/modules.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { ImageOverlayComponent } from './image-overlay/image-overlay.component';
 
 
 @NgModule({
@@ -35,7 +34,6 @@ import { ImageOverlayComponent } from './image-overlay/image-overlay.component';
     ServicesComponent,
     ModulesComponent,
     NavigationComponent,
-    ImageOverlayComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +43,7 @@ import { ImageOverlayComponent } from './image-overlay/image-overlay.component';
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-    OverlayModule
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

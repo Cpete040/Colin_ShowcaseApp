@@ -12,6 +12,7 @@
 </mat-card>
 <span>
     <div class="horizontal">
-        <app-framed-details *ngFor="let topic of topics;" [title]="topic.title" [content]="topic.content" [image_url]="topic.url" [errUrl]="topic.errUrl"></app-framed-details>
+        <app-framed-details (click)="prevImageClick()" *ngFor="let topic of topics;" [title]="topic.title" [content]="topic.content" [image_url]="topic.url" [errUrl]="topic.errUrl"></app-framed-details>
     </div>
 </span>
+<ng-image-slider [hidden]="ishidden" (lightboxClose)="testMthd()" #test [defaultActiveImage]=1 [images]="images" #nav></ng-image-slider>

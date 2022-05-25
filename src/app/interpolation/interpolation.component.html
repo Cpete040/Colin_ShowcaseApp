@@ -15,13 +15,13 @@
             <mat-card-header>
                 <mat-card-title>Component Model</mat-card-title>
             </mat-card-header>
-            <img mat-card-image src="../../assets/images/Interpolation_model.PNG"  onerror="this.src='./assets/images/Interpolation_model.PNG';" alt="NgFor Image">
+            <img (click)="imageClick(0)" mat-card-image src="../../assets/images/Interpolation_model.PNG"  onerror="this.src='./assets/images/Interpolation_model.PNG';" alt="NgFor Image">
         </mat-card>
         <mat-card class="example-card" [class.mat-elevation-z15]="true">
             <mat-card-header>
                 <mat-card-title>Component Template</mat-card-title>
             </mat-card-header>
-            <img mat-card-image src="../../assets/images/Interpolation_template.PNG"  onerror="this.src='./assets/images/Interpolation_template.PNG';" alt="NgFor Image">
+            <img (click)="imageClick(1)" mat-card-image src="../../assets/images/Interpolation_template.PNG"  onerror="this.src='./assets/images/Interpolation_template.PNG';" alt="NgFor Image">
         </mat-card>
     </div>
 </span>
@@ -50,3 +50,4 @@
         <li>multiple expressions in one interpolation</li>
     </ul>
 </mat-card>
+<ng-image-slider [hidden]="imageBoxHidden" (lightboxClose)="hideOnExit()" #test [images]="images" #nav></ng-image-slider>
