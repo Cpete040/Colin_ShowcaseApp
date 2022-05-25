@@ -7,28 +7,31 @@ import { NgImageSliderComponent } from 'ng-image-slider';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent implements OnInit {
+  //image slider info, ignore
   @ViewChild('nav') slider!: NgImageSliderComponent;
   imageBoxHidden: boolean=true;
   images: Array<Object> =  [{image: "assets/images/data_binding_model.PNG"},
                             {image: "assets/images/property_binding.PNG"},
                             {image: "assets/images/event_binding.PNG"},
                             {image: "assets/images/two_way_binding.PNG"}]
+  
+  //opens slider on correct image                          
+  imageClick(index: number) {
+    this.imageBoxHidden=false;
+    this.slider.imageOnClick(index);
+  }
 
+  //hides slider bar when we close the overlay
+  hideOnExit(){
+    this.imageBoxHidden=true;
+  }
+         
   textColor: string="orange"
   resultText: string="Type Something"
   
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  imageClick(index: number) {
-    this.imageBoxHidden=false;
-    this.slider.imageOnClick(index);
-  }
-
-  hideOnExit(){
-    this.imageBoxHidden=true;
   }
   
   toggleTextColor(){

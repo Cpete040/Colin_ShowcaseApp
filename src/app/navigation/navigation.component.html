@@ -14,7 +14,7 @@
         <mat-card-title>app-routing Module</mat-card-title>
         <mat-card-subtitle>hub for routes</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="../../assets/images/app-routing.PNG" onerror="this.src='./assets/images/app-routing.PNG';" alt="NgFor Image">
+    <img (click)="imageClick(0)" mat-card-image src="../../assets/images/app-routing.PNG" onerror="this.src='./assets/images/app-routing.PNG';" alt="NgFor Image">
     <mat-card-content>
         The app-routing module is where you list all the navigation paths for your Angular application. Simply import the components and specify their path in the routes list. You can also include a default path, which redirects a user from an unexpected path. (Be sure to include this path last as the routes are checked in order during runtime) 
     </mat-card-content>
@@ -24,7 +24,7 @@
         <mat-card-title>Router Outlet</mat-card-title>
         <mat-card-subtitle>Output point for components</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="../../assets/images/router_outlet.PNG" onerror="this.src='./assets/images/router_outlet.PNG';" alt="NgFor Image">
+    <img (click)="imageClick(1)" mat-card-image src="../../assets/images/router_outlet.PNG" onerror="this.src='./assets/images/router_outlet.PNG';" alt="NgFor Image">
     <mat-card-content>
         The router outlet is a tag included in the app.component.html page that tells the angular application where to put the components called upon by the path. For this application we include the navbar first so that it's present on every route, then the router outlet allows the components to be rendered below.
     </mat-card-content>
@@ -34,10 +34,10 @@
         <mat-card-title>Router Link</mat-card-title>
         <mat-card-subtitle>Angular Link</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="../../assets/images/router_link.PNG" onerror="this.src='./assets/images/router_link.PNG';" alt="NgFor Image">
+    <img (click)="imageClick(2)" mat-card-image src="../../assets/images/router_link.PNG" onerror="this.src='./assets/images/router_link.PNG';" alt="NgFor Image">
     <mat-card-content>
         The router link directive is used navigate to the different paths specified in the app-routing module. You can include these anywhere in the application.
     </mat-card-content>
 </mat-card>
 </div>
-
+<ng-image-slider [hidden]="imageBoxHidden" (lightboxClose)="hideOnExit()" #test [images]="images" #nav></ng-image-slider>

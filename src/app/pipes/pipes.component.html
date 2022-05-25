@@ -32,7 +32,7 @@
     </div>
     <p>
     The following is the model for this section, attributes will be used to demonstrate pipes:
-    <img src="../../assets/images/pipes_model.PNG" onerror="this.src='./assets/images/pipes_model.PNG';">
+    <img (click)="imageClick(0)" src="../../assets/images/pipes_model.PNG" onerror="this.src='./assets/images/pipes_model.PNG';">
     </p>
         </div>
     </span>
@@ -44,9 +44,6 @@
                 The following is an example of each of these pipes in action:
                 <br>
                 <br>
-            
-
-            
                 The results of applying each pipe:
                 <br>
                 {{caseText | uppercase}}
@@ -61,7 +58,8 @@
                 <br>
                 {{pi | percent}}
             </p>
-            <img src="../../assets/images/pipes_template.PNG" onerror="this.src='./assets/images/pipes_template.PNG';">
+            <img (click)="imageClick(1)" src="../../assets/images/pipes_template.PNG" onerror="this.src='./assets/images/pipes_template.PNG';">
         </div>
     </span>
 </mat-card>
+<ng-image-slider [hidden]="imageBoxHidden" (lightboxClose)="hideOnExit()" #test [images]="images" #nav></ng-image-slider>
