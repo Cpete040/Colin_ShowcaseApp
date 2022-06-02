@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Colin_Angular-Experiment');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Colin_Angular-Experiment app is running!');
-  });
 });
